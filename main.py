@@ -5,9 +5,16 @@
 #                   encrypting/decrypting files using AES-256-CBC encryption that is built into
 #                   the operating system of these platforms.
 
+from app_operations import encrypt_file, decrypt_file
+
 
 def main():
     print('Hello, World! 🌎')
+    example_file = 'test.txt'
+    # going to make the output files of this application end in .enc
+    example_encrypted_file = 'test.txt.enc'
+    print(encrypt_file(example_file))
+    print(decrypt_file(example_encrypted_file))
 
 
 if __name__ == '__main__':

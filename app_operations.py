@@ -24,9 +24,3 @@ def decrypt_file(file_name):
     command = command.replace('{file_name}', file_name, 1)
     command = command.replace('{file_name}', file_name[:-4], -1)
     return command
-
-
-# for testing purposes only
-if __name__ == '__main__':
-    print(encrypt_file('test_file.txt'))
-    print(decrypt_file('test_file.txt.enc'))
