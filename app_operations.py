@@ -4,8 +4,6 @@ def build_command(operation, file_name):
     # base command template, {operation} & {file_name} will be replaced by function
     base_command = 'openssl enc -aes-256-cbc {operation} -in "{file_name}" -out "{file_name}"'
 
-    # command = base_command
-
     # set the operation to encrypt
     base_command = base_command.replace('{operation}', operation)
     base_command = base_command.replace('{file_name}', file_name, 1)
