@@ -14,6 +14,9 @@ def build_command(operation, file_name):
         base_command = base_command.replace('{file_name}', file_name + '.enc', -1)
     return base_command
 
+# TODO: implement command to use encryption/decryption key provided
+#  by the user... command + ' -pass pass: ' + 🔑
+
 
 def encrypt_file(file_name):
     return build_command('-e', file_name)
