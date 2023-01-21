@@ -12,8 +12,8 @@ def main():
     example_file = 'test.txt'
     # going to make the output files of this application end in .enc
     example_encrypted_file = 'test.txt.enc'
-    print(encrypt_file(example_file))
-    print(decrypt_file(example_encrypted_file))
+    print(encrypt_file(example_file, 'password'))
+    print(decrypt_file(example_encrypted_file, 'password'))
 
 
 if __name__ == '__main__':
