@@ -18,4 +18,9 @@ def choose_file_button(frame):
     button.place(relx=0.5, rely=0.5, anchor=CENTER)
     return button
 
+
 # TODO: implement password button function
+def enter_key_button(frame):
+    button = Button(frame, text='Enter Key 🗝️')
+    button.place(relx=0.5, rely=0.5, anchor=CENTER)
+    return button

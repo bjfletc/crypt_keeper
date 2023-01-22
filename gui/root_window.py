@@ -1,8 +1,8 @@
 # going to be the launching point for the GUI part of the application
 
 from tkinter import *
-from gui.frames import left_frame
-from gui.buttons import choose_file_button
+from gui.frames import left_frame, center_frame
+from gui.buttons import choose_file_button, enter_key_button
 
 application_color = '#0A192F'
 
@@ -35,5 +35,7 @@ def build_root():
     choose_file_button(choose_file_frame)
 
     # TODO: implement password button
+    enter_key_frame = center_frame(root, application_color)
+    enter_key_button(enter_key_frame)
 
     root.mainloop()
