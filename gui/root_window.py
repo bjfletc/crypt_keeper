@@ -9,7 +9,6 @@ def build_root():
     root = Tk()
     root.title('Crypt Keeper 🗝️')
     root.config(bg='#0a192f')
-    add_buttons(root).pack()
 
     # how to center window on screen solution found on
     # Stack Overflow: https://stackoverflow.com/a/14912644
@@ -27,5 +26,10 @@ def build_root():
     # set the dimensions of the screen
     # and where it is placed
     root.geometry('%dx%d+%d+%d' % (w, h, x, y))
+
+    frame = Frame(root, bg='red')
+    frame.pack(fill=Y, expand=False, side=LEFT)
+
+    add_buttons(frame).pack()
 
     root.mainloop()
