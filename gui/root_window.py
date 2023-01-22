@@ -12,6 +12,7 @@ def build_root():
     root.title('Crypt Keeper 🗝️')
     root.config(bg=application_color)
 
+    # TODO: move this into its own module since this is re-used
     # how to center window on screen solution found on
     # Stack Overflow: https://stackoverflow.com/a/14912644
     # start of Stack Overflow code...
