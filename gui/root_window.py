@@ -27,11 +27,12 @@ def build_root():
     # and where it is placed
     root.geometry('%dx%d+%d+%d' % (w, h, x, y))
 
-    frame = Frame(root, bg='red', width=300)
+    frame = Frame(root, bg='#0a192f', width=300)
     frame.pack(fill=Y, expand=False, side=LEFT)
     # used to force frame width, since frames default to child's width
     frame.pack_propagate(0)
 
-    add_buttons(frame).pack()
+    # center button in frame
+    add_buttons(frame).place(relx=0.5, rely=0.5, anchor=CENTER)
 
     root.mainloop()
