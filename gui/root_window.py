@@ -1,17 +1,20 @@
 # going to be the launching point for the GUI part of the application
 
 from tkinter import *
-from gui.buttons import add_buttons
+from gui.buttons import add_buttons, choose_file_button
+
+application_color = '#0A192F'
 
 
 # TODO: build out the visual of the root window
 def build_root():
     root = Tk()
     root.title('Crypt Keeper 🗝️')
-    root.config(bg='#0a192f')
+    root.config(bg=application_color)
 
     # how to center window on screen solution found on
     # Stack Overflow: https://stackoverflow.com/a/14912644
+    # start of Stack Overflow code...
     w = 900  # width for the Tk root
     h = 500  # height for the Tk root
 
@@ -26,13 +29,20 @@ def build_root():
     # set the dimensions of the screen
     # and where it is placed
     root.geometry('%dx%d+%d+%d' % (w, h, x, y))
+    # end of Stack Overflow code...
 
-    frame = Frame(root, bg='#0a192f', width=300)
-    frame.pack(fill=Y, expand=False, side=LEFT)
-    # used to force frame width, since frames default to child's width
-    frame.pack_propagate(0)
+    # frame to hold the choose_file button; set to 1/3rd of the
+    # width of the window.
+    left_frame = Frame(root, bg=application_color, width=300)
+    left_frame.pack(side=LEFT, expand=False, fill=Y)
 
-    # center button in frame
-    add_buttons(frame).place(relx=0.5, rely=0.5, anchor=CENTER)
+    # used to force frame width, due to frame's setting width to their
+    # children by default
+    left_frame.pack_propagate(0)
+
+    # # center choose_file button in the frame
+    # choose_file_btn = add_buttons(left_frame)
+    # choose_file_btn.place(relx=0.5, rely=0.5, anchor=CENTER)
+    choose_file_button(left_frame)
 
     root.mainloop()
