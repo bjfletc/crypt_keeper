@@ -1,6 +1,7 @@
 # going to be the launching point for the GUI part of the application
 
 from tkinter import *
+from gui.frames import left_frame
 from gui.buttons import choose_file_button
 
 application_color = '#0A192F'
@@ -31,15 +32,7 @@ def build_root():
     root.geometry('%dx%d+%d+%d' % (w, h, x, y))
     # end of Stack Overflow code...
 
-    # frame to hold the choose_file button; set to 1/3rd of the
-    # width of the window.
-    left_frame = Frame(root, bg=application_color, width=300)
-    left_frame.pack(side=LEFT, expand=False, fill=Y)
-
-    # used to force frame width, due to frame's setting width to their
-    # children by default
-    left_frame.pack_propagate(0)
-
-    choose_file_button(left_frame)
+    choose_file_frame = left_frame(root, application_color)
+    choose_file_button(choose_file_frame)
 
     root.mainloop()
