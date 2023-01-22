@@ -1,7 +1,7 @@
 # going to be the launching point for the GUI part of the application
 
 from tkinter import *
-from gui.buttons import add_buttons, choose_file_button
+from gui.buttons import choose_file_button
 
 application_color = '#0A192F'
 
@@ -40,9 +40,6 @@ def build_root():
     # children by default
     left_frame.pack_propagate(0)
 
-    # # center choose_file button in the frame
-    # choose_file_btn = add_buttons(left_frame)
-    # choose_file_btn.place(relx=0.5, rely=0.5, anchor=CENTER)
     choose_file_button(left_frame)
 
     root.mainloop()

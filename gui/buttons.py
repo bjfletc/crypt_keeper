@@ -5,5 +5,6 @@ from tkinter import *
 
 def choose_file_button(frame):
     button = Button(frame, text='Choose file...')
+    # center choose_file button in the frame
     button.place(relx=0.5, rely=0.5, anchor=CENTER)
     return button
