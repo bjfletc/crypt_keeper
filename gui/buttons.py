@@ -1,7 +1,7 @@
 from tkinter import *
 from tkinter import filedialog
 
-file_name = None
+file_name = ''
 
 
 # TODO: look into adding icons for button images that are transparent
@@ -17,3 +17,5 @@ def choose_file_button(frame):
     # center choose_file button in the frame
     button.place(relx=0.5, rely=0.5, anchor=CENTER)
     return button
+
+# TODO: implement password button function

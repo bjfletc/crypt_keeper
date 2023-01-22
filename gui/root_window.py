@@ -7,7 +7,6 @@ from gui.buttons import choose_file_button
 application_color = '#0A192F'
 
 
-# TODO: build out the visual of the root window
 def build_root():
     root = Tk()
     root.title('Crypt Keeper 🗝️')
@@ -34,5 +33,7 @@ def build_root():
 
     choose_file_frame = left_frame(root, application_color)
     choose_file_button(choose_file_frame)
+
+    # TODO: implement password button
 
     root.mainloop()

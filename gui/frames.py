@@ -9,3 +9,5 @@ def left_frame(window, application_color):
     # children by default
     frame.pack_propagate(False)
     return frame
+
+# TODO: implement password button frame
