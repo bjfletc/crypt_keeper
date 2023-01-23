@@ -6,7 +6,7 @@ from gui.center_window import center_window
 def enter_key_command():
     # create a new window when someone presses the Enter Key button
     new_window = Toplevel()
-    new_window.title('Choose Function & Enter Key 🗝️')
+    new_window.title('Choose Function & Enter Key 🔑')
     center_window(new_window, 900, 500)
 
 
