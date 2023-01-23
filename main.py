@@ -5,7 +5,6 @@
 #                   encrypting/decrypting files using AES-256-CBC encryption that is built into
 #                   the operating system of these platforms.
 
-from app_operations import encrypt_file, decrypt_file
 from gui.root_window import build_root
 
 

@@ -3,6 +3,7 @@
 from tkinter import *
 from gui.frames import left_frame, center_frame
 from gui.buttons import choose_file_button, enter_key_button
+from gui.choose_file import choose_file_frame
 
 application_color = '#0A192F'
 
@@ -32,8 +33,9 @@ def build_root():
     root.geometry('%dx%d+%d+%d' % (w, h, x, y))
     # end of Stack Overflow code...
 
-    choose_file_frame = left_frame(root, application_color)
-    choose_file_button(choose_file_frame)
+    # choose_file_frame = left_frame(root, application_color)
+    # choose_file_button(choose_file_frame)
+    choose_file_frame(root, application_color)
 
     # TODO: implement password button
     enter_key_frame = center_frame(root, application_color)
