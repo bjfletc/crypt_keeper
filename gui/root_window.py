@@ -1,8 +1,8 @@
 # going to be the launching point for the GUI part of the application
 
 from tkinter import *
-from gui.choose_file import choose_file_frame
-from gui.enter_key import enter_key_frame
+from gui.choose_file_frame import choose_file_frame
+from gui.cryptographic_key_frame import enter_key_frame
 from gui.center_window import center_window
 
 application_color = '#0A192F'
