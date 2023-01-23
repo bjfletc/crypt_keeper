@@ -14,7 +14,8 @@ def enter_key_frame(parent_window, application_color):
     frame = Frame(parent_window, bg=application_color, width=300)
     frame.pack(side=LEFT, expand=False, fill=Y)
 
-    button = Button(frame, text='Enter Key 🗝️', command=enter_key_command)
+    # TODO: replace button text with image
+    button = Button(frame, text='Cryptographic Key 🔑️', command=enter_key_command)
     button.place(relx=0.5, rely=0.5, anchor=CENTER)
 
     # used to force frame width, due to frame's setting width to their

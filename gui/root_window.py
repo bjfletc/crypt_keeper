@@ -10,7 +10,7 @@ application_color = '#0A192F'
 
 def build_root():
     root = Tk()
-    root.title('Crypt Keeper 🗝️')
+    root.title('Crypt Keeper 🔑️')
     root.config(bg=application_color)
 
     # center the root window, and set width 900, height 500

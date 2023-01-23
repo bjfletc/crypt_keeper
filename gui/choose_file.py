@@ -14,7 +14,7 @@ def choose_file_frame(parent_window, application_color):
     frame = Frame(parent_window, bg=application_color, width=300)
     frame.pack(side=LEFT, expand=False, fill=Y)
 
-    button = Button(frame, text='Select File 📂', command=choose_filepath)
+    button = Button(frame, text='Choose File 📂', command=choose_filepath)
     # center choose_file button in the frame
     button.place(relx=0.5, rely=0.5, anchor=CENTER)
 
