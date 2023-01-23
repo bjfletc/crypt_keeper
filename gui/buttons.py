@@ -1,15 +1,6 @@
 from tkinter import *
-from tkinter import filedialog
-
-file_name = ''
-
 
 # TODO: look into adding icons for button images that are transparent
-
-def choose_file():
-    global file_name
-    file_name = filedialog.askopenfilename()
-    return file_name
 
 
 def key_function_window():
@@ -30,13 +21,6 @@ def key_function_window():
     # and where it is placed
     new_window.geometry('%dx%d+%d+%d' % (w, h, x, y))
     return new_window
-
-
-def choose_file_button(frame):
-    button = Button(frame, text='Choose file...', command=choose_file)
-    # center choose_file button in the frame
-    button.place(relx=0.5, rely=0.5, anchor=CENTER)
-    return button
 
 
 # TODO: implement password button function
