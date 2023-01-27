@@ -3,6 +3,7 @@
 from tkinter import filedialog
 from tkinter import *
 from gui.center_window_on_display import center_window
+from os import system
 
 file_path = ''
 cryptographic_key = ''
@@ -17,15 +18,19 @@ def choose_file():
 
 # section that houses the middle button logic
 # TODO: cleanup popup window code
-def submit_function(key, func, window):
+def submit_function(key, func, window, component):
     global cryptographic_key
     global function
     cryptographic_key = key
     function = func.get()
+    if function == 0:
+        component.button.config(text='Encrypt File 🔒')
+    else:
+        component.button.config(text='Decrypt File 🔓')
     window.destroy()
 
 
-def enter_key_command():
+def enter_key_command(component):
     # create a new window when someone presses the Enter Key button
     new_window = Toplevel()
     selection = IntVar()
@@ -40,5 +45,5 @@ def enter_key_command():
     encrypt_radio_button.place(x=60, y=300)
     decrypt_radio_button.place(x=60, y=350)
     submit_button = Button(new_window, text='Submit', command=lambda: submit_function(key_entry.get(), selection
-                                                                                      , new_window))
+                                                                                      , new_window, component))
     submit_button.place(x=600, y=325)

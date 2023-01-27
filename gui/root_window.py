@@ -16,7 +16,8 @@ def build_root():
     center_window(root, 900, 500)
 
     left_component = Component(root, application_color, 'Choose File 📂', choose_file)
-    middle_component = Component(root, application_color, 'Cryptographic Key 🔑', enter_key_command)
+    middle_component = Component(root, application_color, 'Cryptographic Key 🔑')
     right_component = Component(root, application_color, 'Encrypt File 🔒')
+    middle_component.button.config(command=lambda: enter_key_command(right_component))
 
     root.mainloop()
