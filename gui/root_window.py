@@ -2,6 +2,7 @@
 
 from gui.center_window import center_window
 from gui.component import *
+from btn_cmd_functions import choose_file
 
 application_color = '#0A192F'
 
@@ -14,7 +15,7 @@ def build_root():
     # center the root window, and set width 900, height 500
     center_window(root, 900, 500)
 
-    left_component = Component(root, application_color, 'Choose File 📂')
+    left_component = Component(root, application_color, 'Choose File 📂', choose_file)
     middle_component = Component(root, application_color, 'Cryptographic Key 🔑')
     right_component = Component(root, application_color, 'Encrypt File 🔒')
 
