@@ -2,7 +2,7 @@
 
 from gui.center_window_on_display import center_window
 from gui.component import *
-from btn_cmd_functions import choose_file, enter_key_command
+from btn_cmd_functions import choose_file, enter_key_command, run
 
 application_color = '#0A192F'
 
@@ -17,7 +17,7 @@ def build_root():
 
     left_component = Component(root, application_color, 'Choose File 📂', choose_file)
     middle_component = Component(root, application_color, 'Cryptographic Key 🔑')
-    right_component = Component(root, application_color, 'Encrypt File 🔒')
+    right_component = Component(root, application_color, 'Encrypt File 🔒', run)
     middle_component.button.config(command=lambda: enter_key_command(right_component))
 
     root.mainloop()

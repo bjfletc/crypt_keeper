@@ -4,6 +4,7 @@ from tkinter import filedialog
 from tkinter import *
 from gui.center_window_on_display import center_window
 from os import system
+from cryptographic_functions import encrypt_file, decrypt_file
 
 file_path = ''
 cryptographic_key = ''
@@ -47,3 +48,16 @@ def enter_key_command(component):
     submit_button = Button(new_window, text='Submit', command=lambda: submit_function(key_entry.get(), selection
                                                                                       , new_window, component))
     submit_button.place(x=600, y=325)
+
+
+# right component functionality
+
+def run():
+    if function == 0:
+        print(encrypt_file(file_path, cryptographic_key))
+        system(encrypt_file(file_path, cryptographic_key))
+    elif function == 1:
+        print(decrypt_file(file_path, cryptographic_key))
+        system(decrypt_file(file_path, cryptographic_key))
+    else:
+        print('Do nothing.')
