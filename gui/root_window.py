@@ -1,6 +1,6 @@
 # launching point for the GUI part of the application
 
-from gui.center_window import center_window
+from gui.center_window_on_display import center_window
 from gui.component import *
 from btn_cmd_functions import choose_file, enter_key_command
 

@@ -2,7 +2,7 @@
 # functions are ran when the buttons are pressed.
 from tkinter import filedialog
 from tkinter import *
-from gui.center_window import center_window
+from gui.center_window_on_display import center_window
 
 file_path = ''
 cryptographic_key = ''
