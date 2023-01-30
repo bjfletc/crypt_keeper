@@ -4,7 +4,7 @@
 from tkinter import *
 
 
-class Component:
+class Section:
 
     def __init__(self, parent_window, app_color, button_name=None, button_command=None):
 

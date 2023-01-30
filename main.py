@@ -5,12 +5,12 @@
 #                   encrypting/decrypting files using AES-256-CBC encryption that is built into
 #                   the operating system of these platforms.
 
-from gui.root_window import build_root
+from gui.root_window import build
 
 
 def main():
     # launches the root window of the program
-    build_root()
+    build()
     # ⬆️ application will hang here until GUI is closed. may need
     # to look into threading if I need it to do other things at this point after the
     # window is opened, while the program is running.
