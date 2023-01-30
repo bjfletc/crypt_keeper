@@ -1,1 +1,3 @@
 /app_flow.pdf
+__pycache__/
+gui/__pycache__/
